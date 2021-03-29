@@ -14,9 +14,9 @@
 
 ### 모르겠으면 print해봐라. print(model_conv) -> 모델의 구조가 print 됨
 
-model_conv.fc.in_features -> layer마다 이름이 지정됨, fc도 layer이름, print(model_conv)로 모델의 구조를 print하고 fc layer를 확인해보자.ㅣ
+model_conv.fc.in_features -> layer마다 이름이 지정됨, fc도 layer이름, print(model_conv)로 모델의 구조를 print하고 fc layer를 확인해보자.
 
-### 함수가 무슨기능을 하는지 살펴보는 방법
+### 함수가 무슨 기능을 하는지 살펴보는 방법
 
 dataiter = iter(trainloader)
 
@@ -32,7 +32,7 @@ print(dataiter)
 
 넘파이 데이터형식은 (Row, Column, 채널)순서로 형성된다.
 
-즉 pytorch에서 다룬 tensor를 numpy를 plot하는데 사용하는 plt.imshow()로 나타내기 위해서는 tensor를 numpy형식으로 인수의 순서를 바꾸어주어야한다.
+즉 pytorch에서 다룬 tensor를 numpy를 plot하는데 사용하는 plt.imshow()로 나타내기 위해서는 tensor를 numpy형식으로 인수의 순서를 바꾸어주어야 한다.
 
 Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 
