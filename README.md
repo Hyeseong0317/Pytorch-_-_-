@@ -8,9 +8,21 @@
 
 사람들이 많이 지정한 평균과 표준편차가 있다. 정규화하는 이유는 모든데이터의 범위자체를 균등하게 분포시켜서 빠르게 학습시킨다.
 
-앞에 있는 layer와 노드를 동일하게 만들어야 오류가 나지 않는다.
+### 앞에 있는 layer와 노드를 동일하게 만들어야 오류가 나지 않는다. 
 
-모르겠으면 print해봐라
+->nn.Linear(10, 2) : 10개의 input을 받고 2개의 output(=2개의 node)를 가지는 layer, Linear함수는 fully connected layer 1개를 의미함.
+
+### 모르겠으면 print해봐라. print(model_conv) -> 모델의 구조가 print 됨
+
+model_conv.fc.in_features -> layer마다 이름이 지정됨, fc도 layer이름, print(model_conv)로 모델의 구조를 print하고 fc layer를 확인해보자.ㅣ
+
+### 함수가 무슨기능을 하는지 살펴보는 방법
+
+dataiter = iter(trainloader)
+
+print(dataiter)
+
+---
 
 ## Pytorch에서는 항상 이미지를 tensor로 다룬다.
 
@@ -25,8 +37,6 @@
 Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 
 Tensor(0, 1, 2) -> Numpy(1, 2, 0)
-
----
 
 inp = inp.numpy().transpose((1, 2, 0)) 
    
@@ -64,8 +74,6 @@ exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)
 ### model을 device(GPU)로 옮긴다.
 
 model_ft = model_ft.to(device)
-
-
 
 ### _, preds = torch.max(outputs, 1) 에서 torch.max는 outputs을 2개(labels과, predictions값)출력한다. Labels값은 사용하지 않을 것이므로 _,로 비운다. 이렇게 하는 이유는 outputs이 2개인 torch.max함수의 출력데이터 개수와 형식을 맞춰주어 오류를 방지하기 위해서이다. 
 
