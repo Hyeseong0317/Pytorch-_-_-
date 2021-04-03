@@ -10,6 +10,12 @@
 
 ---
 
+### 구글colab 사용시마다 torvision을 따로 설치해주어야합니다.
+
+!pip3 install torchvision 
+
+---
+
 모델관련 파일 or train관련된 파일 발췌
 
 어떤 파라미터를 사용했는지 이런거 보기
