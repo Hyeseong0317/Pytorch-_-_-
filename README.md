@@ -1,6 +1,14 @@
 # 캡스톤 디자인 프로젝트(J&K project)
 
-(Kaggle_Dataset)[https://www.kaggle.com/paultimothymooney/kermany2018]
+[Kaggle_Dataset](https://www.kaggle.com/paultimothymooney/kermany2018)
+
+# 참고논문
+
+[Automatic diagnosis of macular diseases from OCT volume based on its two-dimensional feature map and convolutional neural network with attention mechanism](https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-25/issue-9/096004/Automatic-diagnosis-of-macular-diseases-from-OCT-volume-based-on/10.1117/1.JBO.25.9.096004.full?&SSO=1&tab=ArticleLink)
+
+[Automatic Classification of Retinal Optical Coherence Tomography Images With Layer Guided Convolutional Neural Network](https://ieeexplore.ieee.org/abstract/document/8718310/figures#figures)
+
+---
 
 모델관련 파일 or train관련된 파일 발췌
 
@@ -10,17 +18,17 @@
 
 ### 앞에 있는 layer와 노드를 동일하게 만들어야 오류가 나지 않는다. 
 
-->nn.Linear(10, 2) : 10개의 input을 받고 2개의 output(=2개의 node)를 가지는 layer, Linear함수는 fully connected layer 1개를 의미함.
+->`nn.Linear(10, 2)` : 10개의 input을 받고 2개의 output(=2개의 node)를 가지는 layer, Linear함수는 fully connected layer 1개를 의미함.
 
-### 모르겠으면 print해봐라. print(model_conv) -> 모델의 구조가 print 됨
+### 모르겠으면 print해봐라. `print(model_conv)` -> 모델의 구조가 print 됨
 
-model_conv.fc.in_features -> layer마다 이름이 지정됨, fc도 layer이름, print(model_conv)로 모델의 구조를 print하고 fc layer를 확인해보자.
+`model_conv.fc.in_features` -> layer마다 이름이 지정됨, fc도 layer이름, print(model_conv)로 모델의 구조를 print하고 fc layer를 확인해보자.
 
 ### 함수가 무슨 기능을 하는지 살펴보는 방법
 
-dataiter = iter(trainloader)
+`dataiter = iter(trainloader)`
 
-print(dataiter)
+`print(dataiter)`
 
 ---
 
@@ -36,9 +44,9 @@ print(dataiter)
 
 Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 
-Tensor(0, 1, 2) -> Numpy(1, 2, 0)
+`Tensor(0, 1, 2) -> Numpy(1, 2, 0)`
 
-inp = inp.numpy().transpose((1, 2, 0)) 
+`inp = inp.numpy().transpose((1, 2, 0))`
    
     plt.imshow(inp)
     
@@ -46,37 +54,37 @@ inp = inp.numpy().transpose((1, 2, 0))
 
 ### 우리가 지정한 device(GPU0, GPU1, ... 중 하나)로 inputs과 labels를 옮겨 메모리에 저장한다.
 
-inputs = inputs.to(device)
+`inputs = inputs.to(device)`
 
-labels = labels.to(device)
+`labels = labels.to(device)`
 
 ### _, preds = torch.max(outputs, 1) 에서 torch.max는 outputs을 2개(labels과, predictions값)출력한다. Labels값은 사용하지 않을 것이므로 _,로 비운다. 이렇게 하는 이유는 outputs이 2개인 torch.max함수의 출력데이터 개수와 형식을 맞춰주어 오류를 방지하기 위해서이다. 
 
- outputs = model(inputs)
+ `outputs = model(inputs)`
  
             _, preds = torch.max(outputs, 1)
 
 ### loss를 구하는 함수를 지정한다. CrossEntropyLoss()가 일반적이다. CrossEntorpyLoss()함수로 지정된 변수 criterion에 인수로 outputs, labels를 주면 모델이 출력한 Outputs과 우리가 아는 labels값을 비교하여 차이(손실, Loss)를 구한다.
 
-loss = criterion(outputs, labels)
+`loss = criterion(outputs, labels)`
 
-criterion = nn.CrossEntropyLoss()
+`criterion = nn.CrossEntropyLoss()`
 
 
 ### 모든 매개변수들이 최적화되었는지 관찰, 초기 LR(Learning Rate)를 0.001로 지정
 
-optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)
+`optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)`
 
 ### 7 에폭마다 0.1씩 학습률 감소, 학습률이 0.001에서 7 epoch마다 0.1이 곱해지며 감소함. 0.001 * 0.1 per 7 epochs
 
-exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)
+`exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)`
 
 ### model을 device(GPU)로 옮긴다.
 
-model_ft = model_ft.to(device)
+`model_ft = model_ft.to(device)`
 
 ### _, preds = torch.max(outputs, 1) 에서 torch.max는 outputs을 2개(labels과, predictions값)출력한다. Labels값은 사용하지 않을 것이므로 _,로 비운다. 이렇게 하는 이유는 outputs이 2개인 torch.max함수의 출력데이터 개수와 형식을 맞춰주어 오류를 방지하기 위해서이다. 
 
- outputs = model(inputs)
+ `outputs = model(inputs)`
  
             _, preds = torch.max(outputs, 1)
