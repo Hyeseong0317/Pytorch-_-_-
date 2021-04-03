@@ -121,3 +121,26 @@ num_workers은 학습 도중 CPU의 작업을 몇 개의 코어를 사용해서 
 ### Data_loader 함수 역할 도면
 
 ![Data_loader](./Capstone_images/Data_loader.png)
+
+### ImageDataGenerator를 통한 트레이닝, 테스트 데이터 만들기
+
+> Fitting the CNN to the images
+
+`from keras.preprocessing.image import ImageDataGenerator` 
+
+`train_datagen = ImageDataGenerator(rescale = 1./255,
+                                   shear_range = 0.2,
+                                   zoom_range = 0.2,
+                                   horizontal_flip = True)`
+
+`test_datagen = ImageDataGenerator(rescale = 1./255)`
+
+shear_range: Float. Shear Intensity (Shear angle in counter-clockwise direction as radians)
+
+zoom_range: Float or [lower, upper]. Range for random zoom. If a float,
+
+horizontal_flip: Boolean. Randomly flip inputs horizontally.
+
+rescale: rescaling factor. Defaults to None. If None or 0, no rescaling is applied, otherwise we multiply the data by the value provided (before applying any other transformation).
+
+[From 홈페이지](https://keras.io/api/preprocessing/image/)
