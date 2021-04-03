@@ -88,3 +88,11 @@ Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
  `outputs = model(inputs)`
  
             _, preds = torch.max(outputs, 1)
+
+---
+
+# 일부 이미지 시각화하기
+
+numpy.clip(array,min,max) array내의 element들에 대해서 min값보다 작은 값들은 min값으로, max값보다 큰값들을 max값으로 바꿔주는 함수
+
+`inp = np.clip(inp, 0, 1)` 
