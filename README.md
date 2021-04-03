@@ -54,7 +54,7 @@ Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 
 `inp = inp.numpy().transpose((1, 2, 0))`
    
-    plt.imshow(inp)
+             `plt.imshow(inp)`
     
 ---
 
@@ -68,7 +68,7 @@ Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 
  `outputs = model(inputs)`
  
-            _, preds = torch.max(outputs, 1)
+            `_, preds = torch.max(outputs, 1)`
 
 ### loss를 구하는 함수를 지정한다. CrossEntropyLoss()가 일반적이다. CrossEntorpyLoss()함수로 지정된 변수 criterion에 인수로 outputs, labels를 주면 모델이 출력한 Outputs과 우리가 아는 labels값을 비교하여 차이(손실, Loss)를 구한다.
 
@@ -93,7 +93,7 @@ Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 
  `outputs = model(inputs)`
  
-            _, preds = torch.max(outputs, 1)
+            `_, preds = torch.max(outputs, 1)`
 
 ---
 
