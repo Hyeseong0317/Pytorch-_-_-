@@ -111,3 +111,5 @@ This logic often happens 'behind the scenes', for example when running a for loo
 ### num_workers
 
 num_workers은 학습 도중 CPU의 작업을 몇 개의 코어를 사용해서 진행할지에 대한 설정 파라미터입니다. 해당 환경에서 사용 가능한 코어의 개수를 확인해보고 학습 외의 작업에 영향을 주지 않을 정도의 숫자로 설정해주시는 것이 좋습니다.
+
+### Data_loader 함수 역할 도면
