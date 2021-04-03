@@ -12,7 +12,7 @@
 
 ### 구글colab 사용시마다 torvision을 따로 설치해주어야합니다.
 
-!pip3 install torchvision 
+`!pip3 install torchvision`
 
 ---
 
