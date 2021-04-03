@@ -32,7 +32,7 @@
 
 ---
 
-## Pytorch에서는 항상 이미지를 tensor로 다룬다.
+# Pytorch에서는 항상 이미지를 tensor로 다룬다.
 
 ### tensor 형식의 이미지들은 4개의 채널이 있다. (데이터개수, 채널, Row, Column) 순서이다.                                        
                                                                      
@@ -96,3 +96,13 @@ Tensor(채널, Row, Column) -> Numpy(Row, Column, 채널)
 numpy.clip(array,min,max) array내의 element들에 대해서 min값보다 작은 값들은 min값으로, max값보다 큰값들을 max값으로 바꿔주는 함수
 
 `inp = np.clip(inp, 0, 1)` 
+
+### 학습 데이터의 배치를 얻습니다.
+
+`inputs, classes = next(iter(dataloaders['train']))`
+
+These are built-in functions of python, they are used for working with iterables.
+
+Basically iter() calls the __iter__() method on the iris_loader which returns an iterator. next() then calls the __next__() method on that iterator to get the first iteration. Running next() again will get the second item of the iterator, etc.
+
+This logic often happens 'behind the scenes', for example when running a for loop. It calls the __iter__() method on the iterable, and then calls __next__() on the returned iterator until it reaches the end of the iterator. It then raises a stopIteration and the loop stops.
