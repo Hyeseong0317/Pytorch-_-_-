@@ -14,6 +14,37 @@
 
 ---
 
+# 사전학습된 모델을 분석하는 방법 (summary()함수 사용)
+
+`INPUT_SHAPE = (150, 150, 3)`
+
+`vgg16 = tf.keras.applications.VGG16(
+    include_top = False, 
+    weights = 'imagenet', 
+    input_tensor = None,
+    input_shape = INPUT_SHAPE, 
+    pooling = None, 
+    classes = 1000
+)`
+
+`vgg16.trainable = False`
+
+`vgg16.summary()`
+
+# 일반적인 모델을 분석하는 방법 (summary()함수 사용)
+
+`model = tf.keras.models.Sequential([   
+    vgg16,
+    tf.keras.layers.Conv2D(64, (3, 3), activation = 'relu'),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(100, activation = 'relu'),
+    tf.keras.layers.Dense(4, activation = 'softmax')
+])`
+
+`model.summary()`
+
+---
+
 ### 구글colab 사용시마다 torvision을 따로 설치해주어야합니다.
 
 `!pip3 install torchvision`
