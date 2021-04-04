@@ -1,5 +1,7 @@
 # 캡스톤 디자인 프로젝트(J&K project)
 
+## Computerized labeling method different Retinal degeneration from Optical Coherence Tomography Images (OCT) based on convolutional neural networks
+
 [Kaggle_Dataset](https://www.kaggle.com/paultimothymooney/kermany2018)
 
 # 참고 웹사이트
