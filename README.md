@@ -148,3 +148,9 @@ horizontal_flip: Boolean. Randomly flip inputs horizontally.
 rescale: rescaling factor. Defaults to None. If None or 0, no rescaling is applied, otherwise we multiply the data by the value provided (before applying any other transformation).
 
 출처 https://keras.io/api/preprocessing/image/
+
+---
+
+### normalize your images! (ex: by 255?) therefore your model will train faster and could improve your accuracy
+
+
