@@ -200,4 +200,4 @@ rescale: rescaling factor. Defaults to None. If None or 0, no rescaling is appli
 
 ---
 
-auc_1 = 0.9987 // Area Under Curve, ROC 커브 밑부분
+auc_1 = 0.9987 // Area Under Curve, ROC 커브 밑부분, 1에 가까울수록 좋음
