@@ -207,3 +207,7 @@ f1score도 평가지표
 train, val과 test셋 비율 조정=8:1:1
 
 epoch 적어도 10 이상
+
+---
+
+When a model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data, that is called underfitting.
