@@ -210,6 +210,8 @@ epoch 적어도 10 이상
 
 ---
 
+### Overfitting vs Underfitting
+
 When a model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data, that is called underfitting.
 
 Here's the takeaway: Models can suffer from either:
