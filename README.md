@@ -488,3 +488,7 @@ Using cross-validation yields a much better measure of model quality, with the a
 ## 시각화 도구 matplotlib
 
 첫 번째 줄에서 %matplotlib inline 의 역할은 notebook을 실행한 브라우저에서 바로 그림을 볼 수 있게 해주는 것 입니다.
+
+---
+
+n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자료에서 key : value 쌍에서 value값이 가장작은 값을 반환합니다
