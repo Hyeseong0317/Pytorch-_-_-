@@ -234,24 +234,6 @@ The random forest uses many trees, and it makes a prediction by averaging the pr
 
 ---
 
-`cols_with_missing = [col for col in X_train.columns if X_train[col].isnull().any()]`
-
-That is called a list comprehension you can find a lot of resources on the web talking about that. Basically It is a shorthand to create an empty vector and populate it using a loop.
-
-Your example would be equivalent to this:
-
-`cols_with_missing = []`
-
-`for col in X_train.columns:`
-
-  `if X_train[col].isnull().any():`
-  
-    cols_with_missing.append(col)
-    
-This code goes through all the columns in your dataframe and if a column has any null value, that column name is added to cols_with_missing
-
----
-
 ### Score from Approach 2 (Imputation)
 
 Next, we use SimpleImputer to replace missing values with the mean value along each column.
@@ -367,7 +349,7 @@ The inplace parameter is commonly used with the following methods:
 
 ### To keep things simple, we'll drop columns with missing values
 
-`cols_with_missing = [col for col in X.columns if X[col].isnull().any()]` 
+### `cols_with_missing = [col for col in X.columns if X[col].isnull().any()]` 
 
 `X.drop(cols_with_missing, axis=1, inplace=True)`
 
@@ -378,3 +360,21 @@ The inplace parameter is commonly used with the following methods:
 `X_train, X_valid, y_train, y_valid = train_test_split(X, y,
                                                       train_size=0.8, test_size=0.2,
                                                       random_state=0)`
+
+---
+
+### `cols_with_missing = [col for col in X_train.columns if X_train[col].isnull().any()]`
+
+That is called a list comprehension you can find a lot of resources on the web talking about that. Basically It is a shorthand to create an empty vector and populate it using a loop.
+
+Your example would be equivalent to this:
+
+`cols_with_missing = []`
+
+`for col in X_train.columns:`
+
+  `if X_train[col].isnull().any():`
+  
+    cols_with_missing.append(col)
+    
+This code goes through all the columns in your dataframe and if a column has any null value, that column name is added to cols_with_missing
