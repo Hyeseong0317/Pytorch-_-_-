@@ -279,4 +279,4 @@ We do this by checking the data type (or dtype) of each column. The object dtype
 
 ### Sparse matrix
 
-![Data_loader](./Capstone_images/sparse matrix.jpg)
+![Data_loader](./Capstone_images/sparse_matrix.jpg)
