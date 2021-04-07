@@ -381,6 +381,8 @@ This code goes through all the columns in your dataframe and if a column has any
 
 ---
 
+# One-Hot Encoding
+
 ## categorical data를 일단 DataFrame의 Columns에서 제거
 
 ### Drop columns in training and validation data
