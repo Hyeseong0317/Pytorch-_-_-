@@ -391,6 +391,42 @@ This code goes through all the columns in your dataframe and if a column has any
 
 ---
 
+### 1.low cardinality cols(많은 unique entries을 갖는) columns을 원-핫 인코딩합니다
+
+### Apply one-hot encoder to each column with categorical data
+
+`OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)`
+
+`OH_cols_train = pd.DataFrame(OH_encoder.fit_transform(X_train[low_cardinality_cols]))`
+
+`OH_cols_valid = pd.DataFrame(OH_encoder.transform(X_valid[low_cardinality_cols]))`
+
+### 2.원-핫 인코딩으로 빼낸 Columns를 다시 원래 인덱스로 맞춰줍니다
+
+### One-hot encoding removed index; put it back
+
+`OH_cols_train.index = X_train.index`
+
+`OH_cols_valid.index = X_valid.index`
+
+### 3.Categorical columns를 제거합니다
+
+### Remove categorical columns (will replace with one-hot encoding)
+
+`num_X_train = X_train.drop(object_cols, axis=1)`
+
+`num_X_valid = X_valid.drop(object_cols, axis=1)`
+
+### 4.원-핫 인코딩된 columns를 numerical features를 갖는 열에 붙여줍니다(concatenate)
+
+### Add one-hot encoded columns to numerical features
+
+`OH_X_train = pd.concat([num_X_train, OH_cols_train], axis=1)`
+
+`OH_X_valid = pd.concat([num_X_valid, OH_cols_valid], axis=1)`
+
+---
+
 ## Investigating cardinality
 
 The output above shows, for each column with categorical data, the number of unique values in the column. 
