@@ -499,4 +499,4 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 ---
 
-![Data_loader](./Capstone_images/Parameter_Tuningn.png)
+![Data_loader](./Capstone_images/Parameter_Tunin.png)
