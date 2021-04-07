@@ -391,7 +391,7 @@ This code goes through all the columns in your dataframe and if a column has any
 
 ---
 
-### Investigating cardinality
+## Investigating cardinality
 
 The output above shows, for each column with categorical data, the number of unique values in the column. 
 
