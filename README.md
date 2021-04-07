@@ -259,3 +259,14 @@ Next, we use SimpleImputer to replace missing values with the mean value along e
 Although it's simple, filling in the mean value generally performs quite well (but this varies by dataset). 
 
 While statisticians have experimented with more complex ways to determine imputed values (such as regression imputation, for instance), the complex strategies typically give no additional benefit once you plug the results into sophisticated machine learning models.
+
+---
+
+# 데이터 타입
+
+### object type
+
+An object type is a user-defined composite datatype that encapsulates a data structure along with the functions and procedures needed to manipulate the data. The variables that form the data structure are called attributes.
+
+
+![Data_loader](./Capstone_images/object.jpg)
