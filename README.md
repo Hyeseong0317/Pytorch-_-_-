@@ -270,3 +270,7 @@ An object type is a user-defined composite datatype that encapsulates a data str
 
 
 ![Data_loader](./Capstone_images/object.jpg)
+
+Next, we obtain a list of all of the categorical variables in the training data.
+
+We do this by checking the data type (or dtype) of each column. The object dtype indicates a column has text (there are other things it could theoretically be, but that's unimportant for our purposes). For this dataset, the columns with text indicate categorical variables.
