@@ -378,3 +378,23 @@ Your example would be equivalent to this:
     cols_with_missing.append(col)
     
 This code goes through all the columns in your dataframe and if a column has any null value, that column name is added to cols_with_missing
+
+---
+
+## categorical data를 일단 DataFrame의 Columns에서 제거
+
+### Drop columns in training and validation data
+
+`drop_X_train = X_train.select_dtypes(exclude=['object'])` <- categorical 데이터인 dtype=object인 항목을 제외하고 선택
+
+`drop_X_valid = X_valid.select_dtypes(exclude=['object'])` <- categorical 데이터인 dtype=object인 항목을 제외하고 선택
+
+---
+
+### Investigating cardinality
+
+The output above shows, for each column with categorical data, the number of unique values in the column. 
+
+For instance, the 'Street' column in the training data has two unique values: 'Grvl' and 'Pave', corresponding to a gravel road and a paved road, respectively.
+
+We refer to the number of unique entries of a categorical variable as the cardinality of that categorical variable. For instance, the 'Street' variable has cardinality 2.
