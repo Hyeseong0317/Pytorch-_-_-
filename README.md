@@ -279,4 +279,13 @@ We do this by checking the data type (or dtype) of each column. The object dtype
 
 ### Sparse matrix
 
+Score from Approach 3 (One-Hot Encoding)
+We use the OneHotEncoder class from scikit-learn to get one-hot encodings. There are a number of parameters that can be used to customize its behavior.
+
+We set handle_unknown='ignore' to avoid errors when the validation data contains classes that aren't represented in the training data, and
+setting sparse=False ensures that the encoded columns are returned as a numpy array (instead of a sparse matrix).
+To use the encoder, we supply only the categorical columns that we want to be one-hot encoded. For instance, to encode the training data, we supply X_train[object_cols]. (object_cols in the code cell below is a list of the column names with categorical data, and so X_train[object_cols] contains all of the categorical data in the training set.)
+
 ![Data_loader](./Capstone_images/sparse_matrix.jpg)
+
+
