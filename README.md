@@ -478,3 +478,7 @@ We refer to the number of unique entries of a categorical variable as the cardin
 ### Cross validation
 
 ![Data_loader](./Capstone_images/cross_validation.png)
+
+Conclusion
+
+Using cross-validation yields a much better measure of model quality, with the added benefit of cleaning up our code: note that we no longer need to keep track of separate training and validation sets. So, especially for small datasets, it's a good improvement!
