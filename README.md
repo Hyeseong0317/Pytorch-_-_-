@@ -249,3 +249,9 @@ Your example would be equivalent to this:
     cols_with_missing.append(col)
     
 This code goes through all the columns in your dataframe and if a column has any null value, that column name is added to cols_with_missing
+
+---
+
+Although it's simple, filling in the mean value generally performs quite well (but this varies by dataset). 
+
+While statisticians have experimented with more complex ways to determine imputed values (such as regression imputation, for instance), the complex strategies typically give no additional benefit once you plug the results into sophisticated machine learning models.
