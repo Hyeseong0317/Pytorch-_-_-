@@ -482,3 +482,9 @@ We refer to the number of unique entries of a categorical variable as the cardin
 Conclusion
 
 Using cross-validation yields a much better measure of model quality, with the added benefit of cleaning up our code: note that we no longer need to keep track of separate training and validation sets. So, especially for small datasets, it's a good improvement!
+
+---
+
+## 시각화 도구 matplotlib
+
+첫 번째 줄에서 %matplotlib inline 의 역할은 notebook을 실행한 브라우저에서 바로 그림을 볼 수 있게 해주는 것 입니다.
