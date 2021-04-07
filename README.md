@@ -359,7 +359,7 @@ The inplace parameter is commonly used with the following methods:
 
 ### Remove rows with missing target, separate target from predictors
 
-`X.dropna(axis=0, subset=['SalePrice'], inplace=True)` <- SalePrice Column에서 데이터가 없는 자료(NaN)가 있는 Row를 제거하여 저장(inplace=True)
+`X.dropna(axis=0, subset=['SalePrice'], inplace=True)` <- SalePrice Column에서 데이터가 없는 자료(NaN)를 포함하는 Row를 제거하여 저장(inplace=True)
 
 `y = X.SalePrice`
 
