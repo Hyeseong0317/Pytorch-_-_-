@@ -322,3 +322,27 @@ from sklearn.preprocessing import OneHotEncoder
 
 `print(score_dataset(OH_X_train, OH_X_valid, y_train, y_valid))`
 
+---
+
+### [inplace parameter](https://jman4190.medium.com/explaining-the-inplace-parameter-for-beginners-5de7ffa18d2e)
+
+Reviewing the inplace parameter one last time
+
+To sum it up nicely for you, you can think of the True and False setting for the inplace parameter as follows:
+
+When inplace = True, the data is modified in place, which means it will return nothing and the dataframe is now updated.
+
+When inplace = False, which is the default, then the operation is performed and it returns a copy of the object. You then need to save it to something. That something can be a new variable or the same variable name.
+
+Bonus section for making it this far!
+
+The inplace parameter is commonly used with the following methods:
+
+>`dropna()`
+>`drop_duplicates()`
+>`fillna()`
+>`query()`
+>`rename()`
+>`reset_index()`
+>`sort_index()`
+>`sort_values()`
