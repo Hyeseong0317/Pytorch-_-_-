@@ -351,9 +351,9 @@ The inplace parameter is commonly used with the following methods:
 
 ### `cols_with_missing = [col for col in X.columns if X[col].isnull().any()]` 
 
-`X.drop(cols_with_missing, axis=1, inplace=True)`
+`X.drop(cols_with_missing, axis=1, inplace=True)` <- null을 포함하는 columns(axis=1)를 제거한뒤 저장(inplace=True)
 
-`X_test.drop(cols_with_missing, axis=1, inplace=True)`
+`X_test.drop(cols_with_missing, axis=1, inplace=True)` <- null을 포함하는 columns(axis=1)를 제거한뒤 저장(inplace=True)
 
 ### Break off validation set from training data
 
