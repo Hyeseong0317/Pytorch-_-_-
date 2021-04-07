@@ -398,3 +398,39 @@ The output above shows, for each column with categorical data, the number of uni
 For instance, the 'Street' column in the training data has two unique values: 'Grvl' and 'Pave', corresponding to a gravel road and a paved road, respectively.
 
 We refer to the number of unique entries of a categorical variable as the cardinality of that categorical variable. For instance, the 'Street' variable has cardinality 2.
+
+---
+
+## 집합 자료형은 어떻게 만들까?
+
+집합(set)은 파이썬 2.3부터 지원하기 시작한 자료형으로, 집합에 관련된 것을 쉽게 처리하기 위해 만든 자료형이다.
+
+집합 자료형은 다음과 같이 set 키워드를 사용해 만들 수 있다.
+
+`>>> s1 = set([1,2,3])`
+
+`>>> s1`
+
+`{1, 2, 3}`
+
+위와 같이 set()의 괄호 안에 리스트를 입력하여 만들거나 다음과 같이 문자열을 입력하여 만들 수도 있다.
+
+`>>> s2 = set("Hello")`
+
+`>>> s2`
+
+`{'e', 'H', 'l', 'o'}`
+
+※ 비어 있는 집합 자료형은 s = set()로 만들수 있다.
+
+### 집합 자료형의 특징
+
+자, 그런데 위에서 살펴본 set("Hello")의 결과가 좀 이상하지 않은가? 분명 "Hello" 문자열로 set 자료형을 만들었는데 생성된 자료형에는 l 문자가 하나 빠져 있고 순서도 뒤죽박죽이다. 그 이유는 set에 다음과 같은 2가지 큰 특징이 있기 때문이다.
+
+>중복을 허용하지 않는다.
+
+>순서가 없다(Unordered).
+
+리스트나 튜플은 순서가 있기(ordered) 때문에 인덱싱을 통해 자료형의 값을 얻을 수 있지만 set 자료형은 순서가 없기(unordered) 때문에 인덱싱으로 값을 얻을 수 없다. 이는 마치 02-5에서 살펴본 딕셔너리와 비슷하다. 딕셔너리 역시 순서가 없는 자료형이라 인덱싱을 지원하지 않는다.
+
+만약 set 자료형에 저장된 값을 인덱싱으로 접근하려면 다음과 같이 리스트나 튜플로 변환한후 해야 한다.
