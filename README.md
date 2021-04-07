@@ -492,3 +492,7 @@ Using cross-validation yields a much better measure of model quality, with the a
 ---
 
 n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자료에서 key : value 쌍에서 value값이 가장 작은 key값을 반환합니다, 즉 results[200]이 최소값이면 results[200]의 key값인 200을 반환합니다 -> n_estimators_best = 200
+
+---
+
+![Data_loader](./Capstone_images/Hyperparameter_optimization.png)
