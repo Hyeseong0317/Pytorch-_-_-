@@ -231,3 +231,21 @@ Decision trees leave you with a difficult decision. A deep tree with lots of lea
 Even today's most sophisticated modeling techniques face this tension between underfitting and overfitting. But, many models have clever ideas that can lead to better performance. We'll look at the random forest as an example.
 
 The random forest uses many trees, and it makes a prediction by averaging the predictions of each component tree. It generally has much better predictive accuracy than a single decision tree and it works well with default parameters. If you keep modeling, you can learn more models with even better performance, but many of those are sensitive to getting the right parameters.
+
+---
+
+`cols_with_missing = [col for col in X_train.columns if X_train[col].isnull().any()]`
+
+That is called a list comprehension you can find a lot of resources on the web talking about that. Basically It is a shorthand to create an empty vector and populate it using a loop.
+
+Your example would be equivalent to this:
+
+`cols_with_missing = []`
+
+`for col in X_train.columns:`
+
+  `if X_train[col].isnull().any():`
+  
+    cols_with_missing.append(col)
+    
+This code goes through all the columns in your dataframe and if a column has any null value, that column name is added to cols_with_missing
