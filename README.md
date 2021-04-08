@@ -617,3 +617,4 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 `knn_model = NearestNeighbors(n_neighbors=50)`
 
+`knn_model.fit(all_image_embeddings)`
