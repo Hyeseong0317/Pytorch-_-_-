@@ -632,3 +632,7 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 # Pandas와 DataFrame
 
 ![Data_loader](./Capstone_images/DataFrame.png)
+
+## index
+
+![Data_loader](./Capstone_images/pandas_index.png)
