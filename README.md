@@ -646,3 +646,25 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 ![Data_loader](./Capstone_images/Series_name.jpg)
 
 The Series and the DataFrame are intimately related. It's helpful to think of a DataFrame as actually being just a bunch of Series "glued together".
+
+We can use the shape attribute to check how large the resulting DataFrame is:
+
+`wine_reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv")`
+
+`wine_reviews.shape`
+
+(129971, 14)
+
+So our new DataFrame has 130,000 records split across 14 different columns. That's almost 2 million entries!
+
+We can examine the contents of the resultant DataFrame using the head() command, which grabs the first five rows:
+
+`wine_reviews.head()`
+
+# head_without_index_column 
+
+![Data_loader](./Capstone_images/head_without_index_column.jpg)
+
+# head_with_index_column = 0
+
+![Data_loader](./Capstone_images/head_with_index_column.jpg)
