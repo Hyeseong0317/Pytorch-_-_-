@@ -527,3 +527,8 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 ![Data_loader](./Capstone_images/Data_Leakage.jpg)
 
+---
+
+# 평가지표
+
+CV_score <- Cross validation score
