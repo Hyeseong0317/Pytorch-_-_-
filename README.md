@@ -544,3 +544,15 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 # F1_Score
 
 ![Data_loader](./Capstone_images/F1_Score.png)
+
+---
+
+# Tokenizer
+
+먼저 Tokenization이 무엇인가에 대해 알아야 할 것 같습니다.
+ 
+간단하게 말하면 Tokenization이란 Text를 여러개의 Token으로 나누는 것을 말합니다.
+ 
+보통 공백, 구두점, 특수문자 등으로 이를 나누는데요. 그 방법에 따라 다양한 Tokenizer가 있습니다.
+ 
+그리고 이런 Tokenization을 하는 것을 Tokenizer라고 합니다.
