@@ -611,3 +611,9 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 자연어 처리(Natural Language Processing)분야에서 임베딩(Embedding)은 사람이 쓰는 자연어를 기계가 이해할 수 있는 숫자형태인 vector로 바꾼 결과 혹은 그 일련의 과정 전체를 의미한다. 가장 간단한 형태의 임베딩은 단어의 빈도를 그대로 벡터로 사용하는 것이다. 단어-문서 행렬(Term-Document Matrix)는 row는 단어 column은 문서에 대응한다.
 
+---
+
+# 최근접 이웃 알고리즘 k-Nearest Neighbors (k-NN)
+
+knn_model = NearestNeighbors(n_neighbors=50)
+
