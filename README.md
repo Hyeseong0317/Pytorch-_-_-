@@ -519,6 +519,6 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 만약 데이터셋을 train과 test로 split하기 전에 NaN값을 preprocessing하면 test셋의 데이터가 train셋의 데이터에 영향을 주게 됩니다
 
-이는 추후 예측모델을 구현할 때 우리가 사용한 test accuracy는 상대적으로 높게 나오지만 실제 모델을 다른 데이터셋에 대해 예측할 때는 accuracy가 떨어지는 현상, 즉 overfitting 현상이 나타나게 됩니다.
+이는 추후 예측모델을 구현할 때 우리가 사용한 test accuracy는 상대적으로 높게 나오지만 실제 모델을 다른 데이터셋에 대해 예측할 때는 accuracy가 떨어지는 현상, 즉 overfitting 현상을 유발합니다. 따라서 극히 주의하여야 합니다.
 
 ![Data_loader](./Capstone_images/Data_Leakage.jpg)
