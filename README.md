@@ -566,3 +566,13 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 보통 공백, 구두점, 특수문자 등으로 이를 나누는데요. 그 방법에 따라 다양한 Tokenizer가 있습니다.
  
 그리고 이런 Tokenization을 하는 것을 Tokenizer라고 합니다.
+
+---
+
+# Embedding
+
+임베딩 중 가장 단순한 방법이 One-hot encoding을 통한 것이다. 허나, 이러한 Sparse matrix를 통한 계산은 너무 비효율적이다. 그렇다면 어떻게 dense하게 표현할 수 있을지를 고민하는 것이 바로 Embedding이라는 개념의 본질일 것이다.
+
+### 자연어처리에서 임베딩이란?
+
+자연어 처리(Natural Language Processing)분야에서 임베딩(Embedding)은 사람이 쓰는 자연어를 기계가 이해할 수 있는 숫자형태인 vector로 바꾼 결과 혹은 그 일련의 과정 전체를 의미한다. 가장 간단한 형태의 임베딩은 단어의 빈도를 그대로 벡터로 사용하는 것이다. 단어-문서 행렬(Term-Document Matrix)는 row는 단어 column은 문서에 대응한다.
