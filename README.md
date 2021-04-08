@@ -532,3 +532,9 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 # 평가지표
 
 CV_score <- Cross validation score
+
+![Data_loader](./Capstone_images/Recall.png)
+
+![Data_loader](./Capstone_images/Precision.png)
+
+![Data_loader](./Capstone_images/F1_Score.png)
