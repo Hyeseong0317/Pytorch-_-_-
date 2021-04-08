@@ -618,3 +618,11 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 `knn_model = NearestNeighbors(n_neighbors=50)`
 
 `knn_model.fit(all_image_embeddings)`
+
+---
+
+# 이 코드들의 의미는 뭘까? 함수를 알아보자 (나중에라도..)
+
+`duplicate_dict = data.groupby('image_phash').posting_id.agg('unique').to_dict()`
+
+`data['duplic_pred'] = data["image_phash"].map(duplicate_dict)`
