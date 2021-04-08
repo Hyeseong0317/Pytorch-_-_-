@@ -584,15 +584,15 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
     
         ### Don't forget to append the image to .cuda() as well
         
-        `image = image.cuda()`
+        image = image.cuda()
         
         # TODO: create model so we can use the ids & input_mask as well
         
-        `img_embeddings = model_effnet(image)`
+        img_embeddings = model_effnet(image)
         
-        `img_embeddings = img_embeddings.detach().cpu().numpy()`
+        img_embeddings = img_embeddings.detach().cpu().numpy()
         
-        `embeddings.append(img_embeddings)`
+        embeddings.append(img_embeddings)
         
 
 ### Concatenate all embeddings
@@ -605,6 +605,7 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 ### np.save("image_embeddings", all_image_embeddings)
 
+---
 
 ### 자연어처리에서 임베딩이란?
 
