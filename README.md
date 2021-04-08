@@ -633,6 +633,14 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 ![Data_loader](./Capstone_images/DataFrame.png)
 
-## index
+## DataFrame index
 
 ![Data_loader](./Capstone_images/pandas_index.jpg)
+
+# Pandas와 Series
+
+![Data_loader](./Capstone_images/Series.png)
+
+## Series name
+
+![Data_loader](./Capstone_images/Series_name.jpg)
