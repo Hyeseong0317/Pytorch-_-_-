@@ -573,6 +573,40 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 임베딩 중 가장 단순한 방법이 One-hot encoding을 통한 것이다. 허나, 이러한 Sparse matrix를 통한 계산은 너무 비효율적이다. 그렇다면 어떻게 dense하게 표현할 수 있을지를 고민하는 것이 바로 Embedding이라는 개념의 본질일 것이다.
 
+### Extract embeddings of the image (the EffnetB0 representation)
+
+`embeddings = []`
+
+### We aren't training, only extracting the representation
+
+`with torch.no_grad():`
+    `for image, _, _ in tqdm.tqdm(data_loader):`
+    
+        ### Don't forget to append the image to .cuda() as well
+        
+        `image = image.cuda()`
+        
+        # TODO: create model so we can use the ids & input_mask as well
+        
+        `img_embeddings = model_effnet(image)`
+        
+        `img_embeddings = img_embeddings.detach().cpu().numpy()`
+        
+        `embeddings.append(img_embeddings)`
+        
+
+### Concatenate all embeddings
+
+`all_image_embeddings = np.concatenate(embeddings)`
+
+`print("image_embeddings shape: {:,}/{:,}".format(all_image_embeddings.shape[0], all_image_embeddings.shape[1]))`
+
+### Save it to a binary file in NumPy .npy format.
+
+### np.save("image_embeddings", all_image_embeddings)
+
+
 ### 자연어처리에서 임베딩이란?
 
 자연어 처리(Natural Language Processing)분야에서 임베딩(Embedding)은 사람이 쓰는 자연어를 기계가 이해할 수 있는 숫자형태인 vector로 바꾼 결과 혹은 그 일련의 과정 전체를 의미한다. 가장 간단한 형태의 임베딩은 단어의 빈도를 그대로 벡터로 사용하는 것이다. 단어-문서 행렬(Term-Document Matrix)는 row는 단어 column은 문서에 대응한다.
+
