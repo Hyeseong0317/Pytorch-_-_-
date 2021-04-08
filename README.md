@@ -635,4 +635,4 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 ## index
 
-![Data_loader](./Capstone_images/pandas_index.png)
+![Data_loader](./Capstone_images/pandas_index.jpg)
