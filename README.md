@@ -644,3 +644,5 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 ## Series name
 
 ![Data_loader](./Capstone_images/Series_name.jpg)
+
+The Series and the DataFrame are intimately related. It's helpful to think of a DataFrame as actually being just a bunch of Series "glued together".
