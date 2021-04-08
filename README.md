@@ -626,3 +626,9 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 `duplicate_dict = data.groupby('image_phash').posting_id.agg('unique').to_dict()`
 
 `data['duplic_pred'] = data["image_phash"].map(duplicate_dict)`
+
+---
+
+# Pandas와 DataFrame
+
+![Data_loader](./Capstone_images/DataFrame.png)
