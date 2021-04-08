@@ -668,3 +668,9 @@ We can examine the contents of the resultant DataFrame using the head() command,
 # head_with_index_column = 0
 
 ![Data_loader](./Capstone_images/head_with_index_column.jpg)
+
+---
+
+# Map
+
+Maps allow us to transform data in a DataFrame or Series one value at a time for an entire column. 
