@@ -787,4 +787,8 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 
     print(row["member"], row["age"])
     
-    
+---
+
+## isnan
+
+isNaN() isNaN() - 매개변수가 숫자인지 검사하는 함수입니다.(NaN은 Not a Number입니다.)
