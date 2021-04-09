@@ -730,3 +730,11 @@ shapefile 형식은 지리 정보 시스템 소프트웨어를위한 지리 공�
 Every GeoDataFrame contains a special "geometry" column. It contains all of the geometric objects that are displayed when we call the plot() method.
 
 ![Data_loader](./Capstone_images/point_linestring_polygon.png)
+
+---
+
+### nunique()
+
+df['species'].nunique()
+
+-> 유니크한 value의 개수를 나타냄
