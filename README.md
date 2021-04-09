@@ -723,6 +723,10 @@ powerlifting_meets ---- powerlifting_competitors 연결 완료
 
 # Pandas Gemoetry
 
+### Shapefile은 확장자로 .shp 을 갖고, 벡터방식으로 공간정보를 저장한다. .shp 파일은 점(Point), 선(Line), 면(Polygon) 중 하나의 속성을 갖는다.
+
+shapefile 형식은 지리 정보 시스템 소프트웨어를위한 지리 공간 벡터 데이터 형식입니다.
+
 Every GeoDataFrame contains a special "geometry" column. It contains all of the geometric objects that are displayed when we call the plot() method.
 
 ![Data_loader](./Capstone_images/point_linestring_polygon.png)
