@@ -720,3 +720,9 @@ powerlifting_meets ---- powerlifting_competitors 연결 완료
 ![Data_loader](./Capstone_images/powerlifting.jpg)
 
 ---
+
+# Pandas Gemoetry
+
+Every GeoDataFrame contains a special "geometry" column. It contains all of the geometric objects that are displayed when we call the plot() method.
+
+![Data_loader](./Capstone_images/point_linestring_polygon.png)
