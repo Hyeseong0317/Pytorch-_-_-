@@ -686,3 +686,25 @@ Maps allow us to transform data in a DataFrame or Series one value at a time for
 ### rename_axis
 
 ![Data_loader](./Capstone_images/rename_axis.jpg)
+
+## Pandas concat, join
+
+### concat : 2개의 csv파일을 밑으로 연결하여 붙인다. 두 csv파일은 columns수(features수)가 같아야한다.
+
+![Data_loader](./Capstone_images/concat.jpg)
+
+### join : 2개의 csv파일을 왼쪽에서 오른쪽으로 붙인다. 두 csv파일은 columns수(features수)가 같아야한다.
+
+![Data_loader](./Capstone_images/rename_axis.jpg)
+
+ex) 공통된 columns `'title', 'trending'` column을 앞으로 묶어서 빼낸다.
+
+원래 16개의 coulmns이 앞의 2개의 index columns으로 빠지면서 columns수는 (16-2)=14개가 된다.
+
+공통된 2개의 index columns를 제외한 14개의 columns를 같은 2개의 csv파일을 왼쪽에서 오른쪽으로 붙이므로 (14x2)=28 columns을 가진다.
+
+![Data_loader](./Capstone_images/join_left.jpg)
+
+![Data_loader](./Capstone_images/join_right.jpg)
+
+---
