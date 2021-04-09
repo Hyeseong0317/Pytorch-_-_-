@@ -816,3 +816,31 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 isNaN() - 매개변수가 숫자인지 검사하는 함수입니다.(NaN은 Not a Number입니다.)
 
 The math.isnan() method checks whether a value is NaN (Not a Number), or not.
+
+--
+
+## key_on
+
+“key_on=”은 JSON지도와 CSV를 매칭할때 사용할 데이타를 지정하는 곳이다. 
+
+### Create a base map
+
+`m_6 = folium.Map(location=[42.32,-71.0589], tiles='cartodbpositron', zoom_start=12)`
+
+### Add a choropleth map to the base map
+
+`Choropleth(geo_data=districts.__geo_interface__, `
+
+           data=plot_dict,
+           
+           key_on="feature.id", 
+           
+           fill_color='YlGnBu', 
+           
+           legend_name='Major criminal incidents (Jan-Aug 2018)'
+           
+          ).add_to(m_6)
+
+### Display the map
+
+`m_6`
