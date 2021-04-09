@@ -745,4 +745,4 @@ df['species'].nunique()
 
 world DataFrame에서 'continent' column에서 value로 'North America' 또는 'South America'를 갖는 행을 모두 골라 americas에 DataFrame형으로 저장한다.
 
-![Data_loader](./Capstone_images/americas.png)
+![Data_loader](./Capstone_images/americas.jpg)
