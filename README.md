@@ -623,9 +623,31 @@ n_estimators_best = min(results, key=results.get) <- results 딕셔너리형 자
 
 # 이 코드들의 의미는 뭘까? 함수를 알아보자 (나중에라도..)
 
+## to_dict
+
 `duplicate_dict = data.groupby('image_phash').posting_id.agg('unique').to_dict()`
 
 `data['duplic_pred'] = data["image_phash"].map(duplicate_dict)`
+
+
+## Create the map
+
+`m_3 = folium.Map(location=[42.32,-71.0589], tiles='cartodbpositron', zoom_start=13)`
+
+## Add points to the map
+
+`mc = MarkerCluster()`
+
+`for idx, row in daytime_robberies.iterrows():`
+
+    if not math.isnan(row['Long']) and not math.isnan(row['Lat']):
+    
+        mc.add_child(Marker([row['Lat'], row['Long']]))
+`m_3.add_child(mc)`
+
+## Display the map
+
+`m_3`
 
 ---
 
@@ -791,4 +813,6 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 
 ## isnan
 
-isNaN() isNaN() - 매개변수가 숫자인지 검사하는 함수입니다.(NaN은 Not a Number입니다.)
+isNaN() - 매개변수가 숫자인지 검사하는 함수입니다.(NaN은 Not a Number입니다.)
+
+The math.isnan() method checks whether a value is NaN (Not a Number), or not.
