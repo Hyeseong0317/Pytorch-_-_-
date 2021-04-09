@@ -754,3 +754,20 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 ---
 
 ## [apply 사용법 유튜브영상 12:06](https://www.youtube.com/watch?v=P_q0tkYqvSk)
+
+---
+
+
+## zorder 
+
+그냥 그림을 그릴 때 zorder의 값을 지정해주면 그 값이 레이어의 위치라고 보시면 될 것 같아요.
+
+가장 바깥 쪽에 그려지는 그림일수록 zorder의 값이 커야 합니다
+
+`ax = americas.plot(figsize=(10,10), color='white', linestyle=':', edgecolor='gray')`
+
+`start_gdf.plot(ax=ax, color='red', markersize=30)`
+
+`path_gdf.plot(ax=ax, cmap='tab20b', linestyle='-', linewidth=1, zorder=1)`
+
+`end_gdf.plot(ax=ax, color='black', markersize=30)`
