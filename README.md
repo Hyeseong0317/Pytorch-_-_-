@@ -771,3 +771,10 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 `path_gdf.plot(ax=ax, cmap='tab20b', linestyle='-', linewidth=1, zorder=1)`
 
 `end_gdf.plot(ax=ax, color='black', markersize=30)`
+
+
+---
+
+## alpha 투명도 조절
+
+점들을 약간 투명하게 하려면 alpha로 조절하면 됩니다. alpha = 1이면 완전 불투명, 0이면 완전 투명
