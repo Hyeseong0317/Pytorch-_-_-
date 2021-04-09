@@ -671,6 +671,10 @@ We can examine the contents of the resultant DataFrame using the head() command,
 
 ---
 
-# Map
+## Pandas Map
 
 Maps allow us to transform data in a DataFrame or Series one value at a time for an entire column. 
+
+## Pandas Group by
+
+[Python Pandas group by function(Split->Apply->Combine](https://www.youtube.com/watch?v=Wb2Tp35dZ-I&t=546s)
