@@ -783,8 +783,8 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 
 ## [iterrows](https://fourier.dev/programming/2019/03/03/pandas_data_handling_2.html) Pandas를 이용한 데이터 전처리
 
-`for index, row in kakao_friends.iterrows():
+`for index, row in kakao_friends.iterrows():`
 
-    print(row["member"], row["age"])`
+    print(row["member"], row["age"])
     
     
