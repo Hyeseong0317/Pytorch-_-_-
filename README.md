@@ -678,3 +678,5 @@ Maps allow us to transform data in a DataFrame or Series one value at a time for
 ## Pandas Group by
 
 [Python Pandas group by function(Split->Apply->Combine)](https://www.youtube.com/watch?v=Wb2Tp35dZ-I&t=546s)
+
+![Data_loader](./Capstone_images/value_counts.png)
