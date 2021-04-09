@@ -691,7 +691,7 @@ Maps allow us to transform data in a DataFrame or Series one value at a time for
 
 ### concat : 2개의 csv파일을 밑으로 연결하여 붙인다. 두 csv파일은 columns수(features수)가 같아야한다.
 
-![Data_loader](./Capstone_images/concat.jpg)
+![Data_loader](./Capstone_images/concat.png)
 
 ### join : 2개의 csv파일을 왼쪽에서 오른쪽으로 붙인다. 두 csv파일은 columns수(features수)가 같아야한다.
 
