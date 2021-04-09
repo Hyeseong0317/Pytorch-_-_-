@@ -817,7 +817,7 @@ isNaN() - 매개변수가 숫자인지 검사하는 함수입니다.(NaN은 Not 
 
 The math.isnan() method checks whether a value is NaN (Not a Number), or not.
 
---
+---
 
 ## key_on
 
