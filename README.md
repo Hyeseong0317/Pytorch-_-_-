@@ -778,3 +778,12 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 ## alpha 투명도 조절
 
 점들을 약간 투명하게 하려면 alpha로 조절하면 됩니다. alpha = 1이면 완전 불투명, 0이면 완전 투명
+
+---
+
+## [iterrows](https://fourier.dev/programming/2019/03/03/pandas_data_handling_2.html)
+
+`for index, row in kakao_friends.iterrows():
+    print(row["member"], row["age"])`
+    
+    
