@@ -689,7 +689,7 @@ Maps allow us to transform data in a DataFrame or Series one value at a time for
 
 ## Pandas concat, join
 
-### concat : 2개의 csv파일을 밑으로 연결하여 붙인다. 두 csv파일은 columns수(features수)가 같아야한다.
+### concat : 2개의 csv파일을 밑으로 연결하여 붙인다. Left(lsuffix)와 right suffix(rsuffix)를 사용하는 경우, 두 csv파일은 columns수(features수)가 같아야한다.
 
 ![Data_loader](./Capstone_images/concat.png)
 
@@ -706,5 +706,17 @@ ex) 공통된 columns `'title', 'trending'` column을 앞으로 묶어서 빼낸
 ![Data_loader](./Capstone_images/join_left.jpg)
 
 ![Data_loader](./Capstone_images/join_right.jpg)
+
+### join 일반적으로 편하게 쓰는 법
+
+공통된 column을 index_column으로 설정하고 join한다.
+
+ex) powerlifting_meets DataFrame와 powerlifting_competitors DataFrame에서 공통된 MeetID를 set_index로 index_column으로 설정하고 join을 사용해 오른쪽에다 이어 붙인다.
+
+powerlifting_meets ---- powerlifting_competitors 연결 완료
+
+`powerlifting_combined = powerlifting_meets.set_index("MeetID").join(powerlifting_competitors.set_index("MeetID"))`
+
+![Data_loader](./Capstone_images/powerlifting.jpg)
 
 ---
