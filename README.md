@@ -750,3 +750,7 @@ world DataFrame에서 'continent' column에서 value로 'North America' 또는 '
 ---
 
 ## [reset_index](https://azanewta.tistory.com/35)
+
+---
+
+## [apply 사용법 유튜브영상 12:06](https://www.youtube.com/watch?v=P_q0tkYqvSk)
