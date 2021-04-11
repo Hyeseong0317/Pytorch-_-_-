@@ -868,7 +868,7 @@ data is a Pandas Series containing the values that will be used to color-code ea
 
 ---
 
-# X.shape[1] 전체 columnss수 반환 -> input_shape = X.shape[1]
+# X.shape[1] 전체 columns수 반환 -> input_shape = X.shape[1]
 
 X.shape[0] 전체 rows수 반환
 
