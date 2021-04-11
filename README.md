@@ -862,6 +862,14 @@ data is a Pandas Series containing the values that will be used to color-code ea
 
 ---
 
-# rows = batch_size 
+# 그룹화한 rows의 수는 batch_size와 같다 
 
 ![Data_loader](./Capstone_images/rows-batch_size.png)
+
+---
+
+# X.shape[1] 전체 columnss수 반환 -> input_shape = X.shape[1]
+
+X.shape[0] 전체 rows수 반환
+
+---
