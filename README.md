@@ -859,3 +859,9 @@ data is a Pandas Series containing the values that will be used to color-code ea
 > fill_color sets the color scale.
 
 > legend_name labels the legend in the top right corner of the map.
+
+---
+
+# rows = batch_size 
+
+![Data_loader](./Capstone_images/rows-batch_size.png)
