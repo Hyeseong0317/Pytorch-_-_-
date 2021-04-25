@@ -873,3 +873,7 @@ data is a Pandas Series containing the values that will be used to color-code ea
 X.shape[0] 전체 rows수 반환
 
 ---
+
+kwargs는 keyword argument의 줄임말
+
+---
