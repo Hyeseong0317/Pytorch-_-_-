@@ -889,3 +889,28 @@ out = out.view(out.size(0), -1)   # Flatten them for FC
 criterion = torch.nn.CrossEntropyLoss().to(device)    # 비용 함수에 소프트맥스 함수 포함되어져 있음.
 
 ---
+
+작성하신 것을 보면, train_dataloadr, val_dataloader, test_dataloadr 모두 dictionary 형식으로 작성하셨습니다.
+
+따라서 데이터를 확인해보고자 하실 때는 와 같이 작성하셔서 확인해보시면 됩니다.
+
+for id, data in enumerate(test_dataloader['test']):
+
+    print(id)
+    
+    img = data[0]
+    
+    label = data[1]
+    
+    print(img.shape)
+    
+    print(label.shape)
+    
+    break
+    
+    
+    # 결과
+    0
+    torch.Size([15, 3, 400, 400]) # 순서대로 batch_size, channel, height, width입니다
+    torch.Size([15])
+    
