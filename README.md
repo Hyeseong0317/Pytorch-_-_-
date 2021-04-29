@@ -885,3 +885,7 @@ kwargs는 keyword argument의 줄임말
 out = out.view(out.size(0), -1)   # Flatten them for FC
 
 ---
+
+criterion = torch.nn.CrossEntropyLoss().to(device)    # 비용 함수에 소프트맥스 함수 포함되어져 있음.
+
+---
