@@ -881,3 +881,7 @@ X.shape[0] 전체 rows수 반환
 kwargs는 keyword argument의 줄임말
 
 ---
+
+out = out.view(out.size(0), -1)   # Flatten them for FC
+
+---
