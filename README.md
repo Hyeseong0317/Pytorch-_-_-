@@ -892,7 +892,7 @@ criterion = torch.nn.CrossEntropyLoss().to(device)    # 비용 함수에 소프�
 
 작성하신 것을 보면, train_dataloadr, val_dataloader, test_dataloadr 모두 dictionary 형식으로 작성하셨습니다.
 
-따라서 데이터를 확인해보고자 하실 때는 와 같이 작성하셔서 확인해보시면 됩니다.
+따라서 데이터를 확인해보고자 하실 때는 아래와 같이 작성하셔서 확인해보시면 됩니다.
 
 for id, data in enumerate(test_dataloader['test']):
 
