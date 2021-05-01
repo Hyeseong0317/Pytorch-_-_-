@@ -914,3 +914,6 @@ for id, data in enumerate(test_dataloader['test']):
     torch.Size([15, 3, 400, 400]) # 순서대로 batch_size, channel, height, width입니다
     torch.Size([15])
     
+---
+requires requires_grad=True
+->학습을 통해 값이 변경되는 변수임을 명시하는 함수
