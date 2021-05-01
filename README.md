@@ -917,3 +917,7 @@ for id, data in enumerate(test_dataloader['test']):
 ---
 requires requires_grad=True
 ->학습을 통해 값이 변경되는 변수임을 명시하는 함수
+
+---
+optimizer.zero_grad()가 필요한 이유
+파이토치는 미분을 통해 얻은 기울기를 이전에 계산된 기울기 값에 누적시키는 특징이 있습니다. 그렇기 때문에 optimizer.zero_grad()를 통해 미분값을 계속 0으로 초기화시켜줘야 합니다.
