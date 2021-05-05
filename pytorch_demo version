@@ -26,23 +26,23 @@
         "colab_type": "text"
       },
       "source": [
-        "<a href=\"https://colab.research.google.com/github/Hyeseong0317/Pytorch_Capstone_Design/blob/main/pytorch_new.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+        "<a href=\"https://colab.research.google.com/github/Hyeseong0317/Pytorch_Capstone_Design/blob/main/pytorch_demo%20version\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
     },
     {
       "cell_type": "code",
       "metadata": {
         "id": "idmZQ2_tPZb8",
-        "outputId": "47f50e33-7f85-4678-cacc-af888530980b",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "47f50e33-7f85-4678-cacc-af888530980b"
       },
       "source": [
         "from google.colab import drive\n",
         "drive.mount('/content/drive')"
       ],
-      "execution_count": 1,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -65,7 +65,7 @@
       "source": [
         "!pip install torchvision"
       ],
-      "execution_count": 2,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -102,7 +102,7 @@
         "import os\n",
         "import copy"
       ],
-      "execution_count": 3,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -120,7 +120,7 @@
         "if device == 'cuda':\n",
         "    torch.cuda.manual_seed_all(777)"
       ],
-      "execution_count": 4,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -137,7 +137,7 @@
         "device = torch.device(\"cuda\" if USE_CUDA else \"cpu\") # GPU 사용 가능하면 사용하고 아니면 CPU 사용\n",
         "print(\"다음 기기로 학습합니다:\", device)"
       ],
-      "execution_count": 5,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -172,7 +172,7 @@
         "    ])\n",
         "}"
       ],
-      "execution_count": 6,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -186,7 +186,7 @@
         "                                          data_transforms[x])\n",
         "                    for x in ['train', 'val', 'test']}\n"
       ],
-      "execution_count": 21,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -215,7 +215,7 @@
         "\n",
         "device = torch.device(\"cuda:0\" if torch.cuda.is_available() else \"cpu\")\n"
       ],
-      "execution_count": 22,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -250,7 +250,7 @@
         "\n",
         "imshow(out, title=[class_names[x] for x in classes])"
       ],
-      "execution_count": 23,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "display_data",
@@ -285,7 +285,7 @@
         "  print(label.shape)\n",
         "  break"
       ],
-      "execution_count": 24,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -311,7 +311,7 @@
         "inputs = torch.Tensor(30, 3, 400, 400)\n",
         "print('텐서의 크기 : {}'.format(inputs.shape))"
       ],
-      "execution_count": 25,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -343,7 +343,7 @@
         "\n",
         "flatten = nn.Flatten()"
       ],
-      "execution_count": 26,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -378,7 +378,7 @@
         "out = pool(out)\n",
         "print(out.shape)"
       ],
-      "execution_count": 27,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -405,7 +405,7 @@
         "out = out.view(out.size(0), -1) \n",
         "print(out.shape)"
       ],
-      "execution_count": 28,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -433,7 +433,7 @@
         "    torch.nn.Linear(100 * 100 * 64, 4, bias=True) # 최종 output: 400*400 (Maxpooling) -> 200*200 (Maxpooling) -> 100*100 pixels, 채널수 3 -> 32 -> 64, 즉 100*100 pixels, 64채널의 output과 4개의 분류(CNV,DME, DRUSEN, NORMAL)\n",
         ").to(device)"
       ],
-      "execution_count": 29,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -448,7 +448,7 @@
       "source": [
         "model"
       ],
-      "execution_count": 30,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -488,7 +488,7 @@
         "total_batch = len(train_dataloader['train'])\n",
         "print('총 배치의 수 : {}'.format(total_batch))"
       ],
-      "execution_count": 31,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -511,7 +511,7 @@
       "source": [
         "len(test_dataloader['test'])"
       ],
-      "execution_count": 32,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -536,7 +536,7 @@
         "criterion = torch.nn.CrossEntropyLoss().to(device)    # 비용 함수에 소프트맥스 함수 포함되어져 있음.\n",
         "optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)"
       ],
-      "execution_count": 33,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -568,7 +568,7 @@
         "\n",
         "    print('[Epoch: {:>4}] cost = {:>.9}'.format(epoch + 1, avg_cost))"
       ],
-      "execution_count": 34,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -592,10 +592,10 @@
       "cell_type": "code",
       "metadata": {
         "id": "AwfChqv9Y44S",
-        "outputId": "c0f028c7-5188-4b55-8950-7a14313fc544",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "c0f028c7-5188-4b55-8950-7a14313fc544"
       },
       "source": [
         "for X_test, Y_test in test_dataloader['test']: # 미니 배치 단위로 꺼내온다. X는 미니 배치, Y는 레이블.\n",
@@ -609,7 +609,7 @@
         "accuracy = correct_prediction.float().mean()\n",
         "print('Accuracy:', accuracy.item())"
       ],
-      "execution_count": 35,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
