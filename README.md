@@ -12,6 +12,8 @@
 
 [딥러닝 Pytorch로 Tensor와 Data loader 이해하기](https://wikidocs.net/55580)
 
+[딥러닝 resNet 분석논문](https://arxiv.org/pdf/1512.03385.pdf)
+
 # 참고논문
 
 [Automatic diagnosis of macular diseases from OCT volume based on its two-dimensional feature map and convolutional neural network with attention mechanism](https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-25/issue-9/096004/Automatic-diagnosis-of-macular-diseases-from-OCT-volume-based-on/10.1117/1.JBO.25.9.096004.full?&SSO=1&tab=ArticleLink)
